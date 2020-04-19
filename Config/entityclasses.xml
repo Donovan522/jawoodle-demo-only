@@ -75,6 +75,7 @@
   <remove xpath="/entity_classes/entity_class[@name='zombieBurnt']" />
   <remove xpath="/entity_classes/entity_class[@name='zombieBusinessMan']" />
   <remove xpath="/entity_classes/entity_class[@name='zombieBusinessManFeral']" />
+  <remove xpath="/entity_classes/entity_class[@name='legendaryZombieBusinessMan']" />
   <remove xpath="/entity_classes/entity_class[@name='zombieCheerleader']" />
   <remove xpath="/entity_classes/entity_class[@name='zombieCheerleaderFeral']" />
   <remove xpath="/entity_classes/entity_class[@name='zombieCheerleaderRadiated']" />
@@ -99,6 +100,7 @@
   <remove xpath="/entity_classes/entity_class[@name='zombieLab']" />
   <remove xpath="/entity_classes/entity_class[@name='zombieLabFeral']" />
   <remove xpath="/entity_classes/entity_class[@name='zombieLabRadiated']" />
+  <remove xpath="/entity_classes/entity_class[@name='legendaryZombieLab']" />
   <remove xpath="/entity_classes/entity_class[@name='zombieMaleHazmat']" />
   <remove xpath="/entity_classes/entity_class[@name='zombieMarlene']" />
   <remove xpath="/entity_classes/entity_class[@name='zombieMarleneFeral']" />
@@ -135,6 +137,7 @@
   <remove xpath="/entity_classes/entity_class[@name='zombieStripperFeral']" />
   <remove xpath="/entity_classes/entity_class[@name='zombieUtilityWorker']" />
   <remove xpath="/entity_classes/entity_class[@name='zombieUtilityWorkerFeral']" />
+  <remove xpath="/entity_classes/entity_class[@name='legendaryZombieUtilityWorker']" />
   <remove xpath="/entity_classes/entity_class[@name='zombieWightFeral']" />
   <remove xpath="/entity_classes/entity_class[@name='zombieWightRadiated']" />
   <remove xpath="/entity_classes/entity_class[@name='zombieYo']" />
@@ -155,6 +158,7 @@
     <entity_class name="zombieBurnt" extends="zombieTemplateDemo" />
     <entity_class name="zombieBusinessMan" extends="zombieTemplateDemo" />
     <entity_class name="zombieBusinessManFeral" extends="zombieTemplateDemo" />
+    <entity_class name="legendaryZombieBusinessMan" extends="zombieTemplateDemo" />
     <entity_class name="zombieCheerleader" extends="zombieTemplateDemo" />
     <entity_class name="zombieCheerleaderFeral" extends="zombieTemplateDemo" />
     <entity_class name="zombieCheerleaderRadiated" extends="zombieTemplateDemo" />
@@ -179,6 +183,7 @@
     <entity_class name="zombieLab" extends="zombieTemplateDemo" />
     <entity_class name="zombieLabFeral" extends="zombieTemplateDemo" />
     <entity_class name="zombieLabRadiated" extends="zombieTemplateDemo" />
+    <entity_class name="legendaryZombieLab" extends="zombieTemplateDemo" />
     <entity_class name="zombieMaleHazmat" extends="zombieTemplateDemo" />
     <entity_class name="zombieMarlene" extends="zombieTemplateDemo" />
     <entity_class name="zombieMarleneFeral" extends="zombieTemplateDemo" />
@@ -215,6 +220,7 @@
     <entity_class name="zombieStripperFeral" extends="zombieTemplateDemo" />
     <entity_class name="zombieUtilityWorker" extends="zombieTemplateDemo" />
     <entity_class name="zombieUtilityWorkerFeral" extends="zombieTemplateDemo" />
+    <entity_class name="legendaryZombieUtilityWorker" extends="zombieTemplateDemo" />
     <entity_class name="zombieWightFeral" extends="zombieTemplateDemo" />
     <entity_class name="zombieWightRadiated" extends="zombieTemplateDemo" />
     <entity_class name="zombieYo" extends="zombieTemplateDemo" />

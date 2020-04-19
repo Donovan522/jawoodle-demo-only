@@ -11,6 +11,7 @@ zombieBoeRadiated
 zombieBurnt
 zombieBusinessMan
 zombieBusinessManFeral
+legendaryZombieBusinessMan
 zombieCheerleader
 zombieCheerleaderFeral
 zombieCheerleaderRadiated
@@ -35,6 +36,7 @@ zombieJoeRadiated
 zombieLab
 zombieLabFeral
 zombieLabRadiated
+legendaryZombieLab
 zombieMaleHazmat
 zombieMarlene
 zombieMarleneFeral
@@ -71,6 +73,7 @@ zombieStripper
 zombieStripperFeral
 zombieUtilityWorker
 zombieUtilityWorkerFeral
+legendaryZombieUtilityWorker
 zombieWightFeral
 zombieWightRadiated
 zombieYo
