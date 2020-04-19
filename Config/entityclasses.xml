@@ -1,0 +1,224 @@
+<configs>
+  <insertAfter xpath="/entity_classes/entity_class[@name='zombieTemplateMale']">
+    <entity_class name="zombieTemplateDemo" extends="zombieTemplateMale">
+      <property name="Tags" value="entity,zombie,walker,boss" />
+
+      <property name="AvatarController" value="AvatarZombie01Controller" />
+      <property name="ModelType" value="Standard" />
+      <property name="WalkType" value="2" />
+      <property name="RootMotion" value="true" />
+      <property name="HasDeathAnim" value="true" />
+      <property name="AIPathCostScale" value=".35, .55" />
+
+      <property name="Mesh" value="Zombies/zombieStandardDemolitionRagdoll" />
+      <property name="Class" value="EntityZombieCop" />
+      <property name="Mass" value="300" />
+
+      <property name="AITask-1" value="BreakBlock" />
+      <property name="AITask-2" value="DestroyArea" />
+      <property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0" />
+      <property name="AITask-4" value="ApproachSpot" />
+      <property name="AITask-5" value="Look" />
+      <property name="AITask-6" value="Wander" />
+      <property name="AITask-7" value="" />
+      <!-- Marks end, so we don't inheirit -->
+
+      <property name="SoundRandom" value="demolitionzroam" />
+      <property name="SoundAlert" value="demolitionzalert" />
+      <property name="SoundAttack" value="demolitionzattack" />
+      <property name="SoundHurt" value="demolitionzpain" />
+      <property name="SoundDeath" value="demolitionzdeath" />
+      <property name="SoundSense" value="demolitionzsense" />
+      <property name="SoundFootstepModifier" value="bear_footstep" />
+
+      <!-- Gameplay -->
+      <property name="HandItem" value="meleeHandZombieDemolition" />
+      <property name="JumpMaxDistance" value="1, 2" />
+      <property name="PainResistPerHit" value=".5" />
+      <property name="Explosion.ParticleIndex" value="2" />
+      <property name="Explosion.RadiusBlocks" value="5" />
+      <property name="Explosion.RadiusEntities" value="6" />
+      <property name="Explosion.BlockDamage" value="5000" />
+      <property name="Explosion.EntityDamage" value="800" />
+      <property name="Explosion.DamageBonus.earth" value=".1" />
+      <property name="StompsSpikes" value="true" />
+      <property name="ExplodeDelay" value="2" />
+      <property name="ExplodeHealthThreshold" value="0" />
+      <!-- Disable Health explosion -->
+      <property name="SoundExplodeWarn" value="demolitionzexplodewarning" />
+      <property name="SoundTick" value="demolitionz_beep,.5,.9" />
+
+      <property name="ExperienceGain" value="750" />
+      <property name="LootDropEntityClass" value="EntityLootContainerBoss" />
+      <property name="LootDropProb" value=".3" />
+
+      <effect_group name="Base Effects">
+        <passive_effect name="HealthMax" operation="base_set" value="1000" />
+        <passive_effect name="HealthMax" operation="perc_set" value="1" />
+        <passive_effect name="DamageModifier" operation="perc_set" value="1" tags="head" />
+        <passive_effect name="PhysicalDamageResist" operation="base_set" value="60" />
+        <triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1" />
+      </effect_group>
+    </entity_class>
+  </insertAfter>
+
+  <remove xpath="/entity_classes/entity_class[@name='zombieArlene']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieArleneFeral']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieArleneRadiated']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieBehemoth']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieBiker']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieBikerFeral']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieBikerRadiated']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieBoe']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieBoeFeral']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieBoeRadiated']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieBurnt']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieBusinessMan']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieBusinessManFeral']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieCheerleader']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieCheerleaderFeral']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieCheerleaderRadiated']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieDarlene']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieDarleneFeral']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieDarleneRadiated']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieDemolition']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieFarmer']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieFarmerFeral']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieFatCop']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieFatCopFeral']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieFatCopRadiated']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieFatHawaiian']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieFatHawaiianFeral']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieFemaleFat']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieFemaleFatFeral']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieFemaleFatRadiated']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieFootballPlayer']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieJoe']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieJoeFeral']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieJoeRadiated']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieLab']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieLabFeral']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieLabRadiated']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieMaleHazmat']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieMarlene']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieMarleneFeral']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieMarleneRadiated']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieMiner']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieMoe']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieMoeFeral']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieMoeRadiated']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieNurse']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieNurseFeral']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieOldTimer']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieOldTimerFeral']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieOldTimerRadiated']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieScreamer']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieScreamerFeral']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieScreamerRadiated']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieSkateboarder']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieSkateboarderFeral']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieSkateboarderRadiated']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieSnow']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieSnowFeral']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieSoldier']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieSoldierFeral']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieSoldierRadiated']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieSpider']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieSpiderFeral']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieSpiderRadiated']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieSteve']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieSteveCrawler']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieSteveCrawlerFeral']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieSteveFeral']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieSteveRadiated']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieStripper']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieStripperFeral']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieUtilityWorker']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieUtilityWorkerFeral']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieWightFeral']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieWightRadiated']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieYo']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieYoFeral']" />
+  <remove xpath="/entity_classes/entity_class[@name='zombieYoRadiated']" />
+
+  <insertAfter xpath="/entity_classes/entity_class[@name='zombieTemplateDemo']">
+    <entity_class name="zombieArlene" extends="zombieTemplateDemo" />
+    <entity_class name="zombieArleneFeral" extends="zombieTemplateDemo" />
+    <entity_class name="zombieArleneRadiated" extends="zombieTemplateDemo" />
+    <entity_class name="zombieBehemoth" extends="zombieTemplateDemo" />
+    <entity_class name="zombieBiker" extends="zombieTemplateDemo" />
+    <entity_class name="zombieBikerFeral" extends="zombieTemplateDemo" />
+    <entity_class name="zombieBikerRadiated" extends="zombieTemplateDemo" />
+    <entity_class name="zombieBoe" extends="zombieTemplateDemo" />
+    <entity_class name="zombieBoeFeral" extends="zombieTemplateDemo" />
+    <entity_class name="zombieBoeRadiated" extends="zombieTemplateDemo" />
+    <entity_class name="zombieBurnt" extends="zombieTemplateDemo" />
+    <entity_class name="zombieBusinessMan" extends="zombieTemplateDemo" />
+    <entity_class name="zombieBusinessManFeral" extends="zombieTemplateDemo" />
+    <entity_class name="zombieCheerleader" extends="zombieTemplateDemo" />
+    <entity_class name="zombieCheerleaderFeral" extends="zombieTemplateDemo" />
+    <entity_class name="zombieCheerleaderRadiated" extends="zombieTemplateDemo" />
+    <entity_class name="zombieDarlene" extends="zombieTemplateDemo" />
+    <entity_class name="zombieDarleneFeral" extends="zombieTemplateDemo" />
+    <entity_class name="zombieDarleneRadiated" extends="zombieTemplateDemo" />
+    <entity_class name="zombieDemolition" extends="zombieTemplateDemo" />
+    <entity_class name="zombieFarmer" extends="zombieTemplateDemo" />
+    <entity_class name="zombieFarmerFeral" extends="zombieTemplateDemo" />
+    <entity_class name="zombieFatCop" extends="zombieTemplateDemo" />
+    <entity_class name="zombieFatCopFeral" extends="zombieTemplateDemo" />
+    <entity_class name="zombieFatCopRadiated" extends="zombieTemplateDemo" />
+    <entity_class name="zombieFatHawaiian" extends="zombieTemplateDemo" />
+    <entity_class name="zombieFatHawaiianFeral" extends="zombieTemplateDemo" />
+    <entity_class name="zombieFemaleFat" extends="zombieTemplateDemo" />
+    <entity_class name="zombieFemaleFatFeral" extends="zombieTemplateDemo" />
+    <entity_class name="zombieFemaleFatRadiated" extends="zombieTemplateDemo" />
+    <entity_class name="zombieFootballPlayer" extends="zombieTemplateDemo" />
+    <entity_class name="zombieJoe" extends="zombieTemplateDemo" />
+    <entity_class name="zombieJoeFeral" extends="zombieTemplateDemo" />
+    <entity_class name="zombieJoeRadiated" extends="zombieTemplateDemo" />
+    <entity_class name="zombieLab" extends="zombieTemplateDemo" />
+    <entity_class name="zombieLabFeral" extends="zombieTemplateDemo" />
+    <entity_class name="zombieLabRadiated" extends="zombieTemplateDemo" />
+    <entity_class name="zombieMaleHazmat" extends="zombieTemplateDemo" />
+    <entity_class name="zombieMarlene" extends="zombieTemplateDemo" />
+    <entity_class name="zombieMarleneFeral" extends="zombieTemplateDemo" />
+    <entity_class name="zombieMarleneRadiated" extends="zombieTemplateDemo" />
+    <entity_class name="zombieMiner" extends="zombieTemplateDemo" />
+    <entity_class name="zombieMoe" extends="zombieTemplateDemo" />
+    <entity_class name="zombieMoeFeral" extends="zombieTemplateDemo" />
+    <entity_class name="zombieMoeRadiated" extends="zombieTemplateDemo" />
+    <entity_class name="zombieNurse" extends="zombieTemplateDemo" />
+    <entity_class name="zombieNurseFeral" extends="zombieTemplateDemo" />
+    <entity_class name="zombieOldTimer" extends="zombieTemplateDemo" />
+    <entity_class name="zombieOldTimerFeral" extends="zombieTemplateDemo" />
+    <entity_class name="zombieOldTimerRadiated" extends="zombieTemplateDemo" />
+    <entity_class name="zombieScreamer" extends="zombieTemplateDemo" />
+    <entity_class name="zombieScreamerFeral" extends="zombieTemplateDemo" />
+    <entity_class name="zombieScreamerRadiated" extends="zombieTemplateDemo" />
+    <entity_class name="zombieSkateboarder" extends="zombieTemplateDemo" />
+    <entity_class name="zombieSkateboarderFeral" extends="zombieTemplateDemo" />
+    <entity_class name="zombieSkateboarderRadiated" extends="zombieTemplateDemo" />
+    <entity_class name="zombieSnow" extends="zombieTemplateDemo" />
+    <entity_class name="zombieSnowFeral" extends="zombieTemplateDemo" />
+    <entity_class name="zombieSoldier" extends="zombieTemplateDemo" />
+    <entity_class name="zombieSoldierFeral" extends="zombieTemplateDemo" />
+    <entity_class name="zombieSoldierRadiated" extends="zombieTemplateDemo" />
+    <entity_class name="zombieSpider" extends="zombieTemplateDemo" />
+    <entity_class name="zombieSpiderFeral" extends="zombieTemplateDemo" />
+    <entity_class name="zombieSpiderRadiated" extends="zombieTemplateDemo" />
+    <entity_class name="zombieSteve" extends="zombieTemplateDemo" />
+    <entity_class name="zombieSteveCrawler" extends="zombieTemplateDemo" />
+    <entity_class name="zombieSteveCrawlerFeral" extends="zombieTemplateDemo" />
+    <entity_class name="zombieSteveFeral" extends="zombieTemplateDemo" />
+    <entity_class name="zombieSteveRadiated" extends="zombieTemplateDemo" />
+    <entity_class name="zombieStripper" extends="zombieTemplateDemo" />
+    <entity_class name="zombieStripperFeral" extends="zombieTemplateDemo" />
+    <entity_class name="zombieUtilityWorker" extends="zombieTemplateDemo" />
+    <entity_class name="zombieUtilityWorkerFeral" extends="zombieTemplateDemo" />
+    <entity_class name="zombieWightFeral" extends="zombieTemplateDemo" />
+    <entity_class name="zombieWightRadiated" extends="zombieTemplateDemo" />
+    <entity_class name="zombieYo" extends="zombieTemplateDemo" />
+    <entity_class name="zombieYoFeral" extends="zombieTemplateDemo" />
+    <entity_class name="zombieYoRadiated" extends="zombieTemplateDemo" />
+  </insertAfter>
+</configs>
